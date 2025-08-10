@@ -1,17 +1,17 @@
-<!DOCTYPE html>  
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Zino Memani | Designer Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
+  <header class="glass-header">
     <div class="container">
-      <h1 class="neon-text" aria-label="Zino Memani">ZINO MEMANI</h1>
-      <nav aria-label="Primary Navigation">
+      <h1 class="neon-text">ZINO MEMANI</h1>
+      <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+      <nav>
         <ul>
           <li><a href="#about" class="nav-link">About</a></li>
           <li><a href="#projects" class="nav-link">Projects</a></li>
@@ -22,58 +22,56 @@
   </header>
 
   <main>
-    <section id="about" class="section fade-in" tabindex="0">
-      <div class="container">
+    <!-- About -->
+    <section id="about" class="section fade-in">
+      <div class="glass-card">
         <h2 class="neon-text">ABOUT ME</h2>
         <p>I’m just passionate creator.</p>
-        <section id="about-me">
-          <h3 class="neon-text-sm">WHO AM I FR?</h3>
-  <p>I’m Zinothando, a passionate graphic designer and creative thinker driven by the power of visual storytelling. I love transforming ideas into impactful designs that communicate clearly and inspire action. Whether it’s branding, digital art, or interactive web experiences, I bring a fresh perspective and attention to detail to every project.</p>
-  <p>Beyond design, I’m fascinated by innovation, technology, and entrepreneurship. I’m always eager to learn, grow, and push boundaries,whether it’s exploring new creative styles, coding, or diving into business opportunities.</p>
-  <p>My goal is to blend creativity with strategy to build brands and projects that not only look great but also make a difference. I’m excited about the journey ahead and always open to new collaborations and challenges.</p>
-</section>
-
+        <h3 class="neon-text-sm">WHO AM I FR?</h3>
+        <p>I’m Zinothando, a passionate graphic designer and creative thinker driven by the power of visual storytelling.</p>
+        <p>Beyond design, I’m fascinated by innovation, technology, and entrepreneurship.</p>
+        <p>My goal is to blend creativity with strategy to build brands that make a difference.</p>
       </div>
     </section>
 
-    <section id="projects" class="section fade-in" tabindex="0">
-      <div class="container">
-        <h2 class="neon-text">MY PROJECTS</h2>
-        <div class="project-cards">
-          <article class="project-card" tabindex="0">
-            <h3 class="neon-text-sm">PROJECT ONE</h3>
-            <p>CLOTHING DESIGNS & FRIENDS</p>
-          </article>
-          <article class="project-card" tabindex="0">
-            <h3 class="neon-text-sm">PROJECT TWO</h3>
-            <p>STARR DESIGNS CO.</p>
-          </article>
-          <article class="project-card" tabindex="0">
-            <h3 class="neon-text-sm">PROJECT THREE</h3>
-            <p>"KONCEPTS"</p>
-          </article>
+    <!-- Projects -->
+    <section id="projects" class="section fade-in">
+      <h2 class="neon-text">MY PROJECTS</h2>
+      <div class="project-cards">
+        <div class="project-card">
+          <h3 class="neon-text-sm">PROJECT ONE</h3>
+          <p>CLOTHING DESIGNS & FRIENDS</p>
+        </div>
+        <div class="project-card">
+          <h3 class="neon-text-sm">PROJECT TWO</h3>
+          <p>STARR DESIGNS CO.</p>
+        </div>
+        <div class="project-card">
+          <h3 class="neon-text-sm">PROJECT THREE</h3>
+          <p>"KONCEPTS"</p>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="section fade-in" tabindex="0">
-      <div class="container">
+    <!-- Contact -->
+    <section id="contact" class="section fade-in">
+      <div class="glass-card">
         <h2 class="neon-text">Contact</h2>
-        <p>LET'S WORK: <br>EMAIL: <a href="mailto:memanizinothando@gmail.com" class="email-link">memanizinothando@gmail.com</a></p>
-        <p><br>INSTAGRAM: <a href="https://www.instagram.com/zino4luvv/?hl=en" class="INSTAGRAM-link">ZINOLUV</a></p>
-        <p><br>FACEBOOK: <a href="https://www.facebook.com/zinothando.memani.1/" class="email-link">ZINO MEMANI</a></p>
+        <p>LET'S WORK: <br>
+          EMAIL: <a href="mailto:memanizinothando@gmail.com" class="email-link">memanizinothando@gmail.com</a>
+        </p>
+        <p>INSTAGRAM: <a href="https://www.instagram.com/zino4luvv" class="email-link">ZINOLUV</a></p>
+        <p>FACEBOOK: <a href="https://www.facebook.com/zinothando.memani.1/" class="email-link">ZINO MEMANI</a></p>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="container">
-      <p>© 2025 ZINO MEMANI | Creator Portfolio</p>
-    </div>
+    <p>© 2025 ZINO MEMANI | Creator Portfolio</p>
   </footer>
 
   <script>
-    // Smooth scroll for anchor links
+    // Smooth Scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', e => {
         e.preventDefault();
@@ -82,7 +80,14 @@
         });
       });
     });
+
+    // Mobile Menu Toggle
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav ul');
+
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('show');
+    });
   </script>
 </body>
 </html>
-
