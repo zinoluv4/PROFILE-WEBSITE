@@ -10,7 +10,6 @@
   <header class="glass-header">
     <div class="container">
       <h1 class="neon-text">ZINO MEMANI</h1>
-      <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
       <nav>
         <ul>
           <li><a href="#about" class="nav-link">About</a></li>
@@ -38,18 +37,18 @@
     <section id="projects" class="section fade-in">
       <h2 class="neon-text">MY PROJECTS</h2>
       <div class="project-cards">
-        <div class="project-card">
+        <a href="project1.html" class="project-card">
           <h3 class="neon-text-sm">PROJECT ONE</h3>
           <p>CLOTHING DESIGNS & FRIENDS</p>
-        </div>
-        <div class="project-card">
+        </a>
+        <a href="project2.html" class="project-card">
           <h3 class="neon-text-sm">PROJECT TWO</h3>
           <p>STARR DESIGNS CO.</p>
-        </div>
-        <div class="project-card">
+        </a>
+        <a href="project3.html" class="project-card">
           <h3 class="neon-text-sm">PROJECT THREE</h3>
           <p>"KONCEPTS"</p>
-        </div>
+        </a>
       </div>
     </section>
 
@@ -69,25 +68,6 @@
   <footer>
     <p>© 2025 ZINO MEMANI | Creator Portfolio</p>
   </footer>
-
-  <script>
-    // Smooth Scroll
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', e => {
-        e.preventDefault();
-        document.querySelector(anchor.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
-    });
-
-    // Mobile Menu Toggle
-    const toggle = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('nav ul');
-
-    toggle.addEventListener('click', () => {
-      nav.classList.toggle('show');
-    });
-  </script>
 </body>
 </html>
+
